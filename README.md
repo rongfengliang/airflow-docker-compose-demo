@@ -1,6 +1,8 @@
 
 # apache airflow docker-compose
 
+include postgres for graphql
+
 ## How to Run
 
 * local
