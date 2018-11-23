@@ -9,7 +9,7 @@ services:
         ports:
         - "5432:5432"
     graphql-engine:
-        image: hasura/graphql-engine:v1.0.0-alpha25
+        image: hasura/graphql-engine:v1.0.0-alpha29
         ports:
         - "8090:8080"
         depends_on:
@@ -21,7 +21,7 @@ services:
             graphql-engine --database-url postgres://airflow:airflow@postgres:5432/airflow serve --enable-console;
             "
     webserver:
-        image: puckel/docker-airflow:1.10.0-2
+        image: puckel/docker-airflow:1.10.1
         depends_on:
             - postgres
         environment:
